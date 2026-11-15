@@ -1,0 +1,597 @@
+/* overall page format */
+* {
+    
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body {
+    background-color: black;
+    color: white;
+    
+
+    font-family: Roboto, sans-serif;
+}
+/* header background and content */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75)), url(/resources/background-i.jpg);
+    
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    height: 96vh;
+    
+
+}
+.t-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 30px;
+    
+}
+section img {
+    height: 35px;
+
+}
+header, main, footer {
+    padding: 0 250px;
+
+}
+header button {
+    background-color: #e50914;
+    color: white;
+    font-size: 12px;;
+    font-weight: bold;
+    padding: 4px 16px;
+    height: 32px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+
+}
+header h1 {
+    padding-top: 24vh;
+    font-size: 55px;
+    font-weight: bold;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+header h3 {
+    padding-top: 14px;
+    font-size: 1.09rem;
+    font-weight: bold;
+
+}
+header p {
+    padding-top: 4vh;
+    padding-bottom: 15px;
+    font-size: 13.5px;
+    font-weight: bold;
+}
+input {
+    background-color: rgba(43, 42, 42, 0.25);
+    color: grey;
+    border: grey 1px solid;
+    border-radius: 3px;
+    padding: 10px;
+    font-weight: bold;
+    min-height: 45px;
+    min-width: 340px;
+}
+.b-header button {
+    
+    font-size: 18px;
+    margin-left: 4px;
+    min-height: 45px;
+    min-width: 170px;
+    border-radius: 3px;
+
+}
+
+div img {
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+} 
+.hero-curve {
+    position: relative;
+    margin-top: -50px;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    pointer-events: none;
+}
+.t-content {
+    border-top: 8px solid  linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%);
+    padding-top: 40px;
+}
+/* divider curved */
+.curve-divider::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 505 50% 0 0;
+
+    background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), #000;
+}
+.t-content {
+    position: relative;
+    z-index: 11;
+    background-color: #000;
+    padding: 10 5% 40px;
+    margin-top:-20px;
+} 
+
+.t-content h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-top: 30px;
+
+}
+.t-article {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px 10px;
+}
+
+.t-media img {
+    background-size: contain;
+    min-height: 240px;
+    min-width: 190px;
+    display: block;
+    border-radius: 5px;
+}
+
+.t-media {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    padding-left: 20px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+}
+.t-media:hover {
+    transform: scale(0.98);
+}
+/* video section */
+.video-za {
+    width: 100%;
+    max-width: 800px; 
+    aspect-ratio: 16 / 9; 
+    margin: 2rem auto; 
+    border-radius: 16px;
+    overflow: hidden; 
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    margin-top: 50px;
+}
+
+.video-za:hover {
+    transform: scale(1.02); 
+    border-color: rgba(9, 13, 229, 0.7); 
+    box-shadow: 0 15px 45px rgba(11, 36, 83, 0.35); 
+}
+
+.video-za iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+/* More reason section */
+.r-number {
+
+    position: absolute;
+    bottom: 5px;
+    z-index: 2;
+    left: 0;
+    font-size: 5.5rem;
+    font-weight: 800;
+    line-height: 0.75;
+    color: black;
+    -webkit-text-stroke: 2px #b6b6b6;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.75);
+    user-select: none;
+    letter-spacing: -5px;
+}
+
+.re-content h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-top: 30px;
+
+}
+.re-media img{
+    height: 50px;
+    
+}
+
+.re-article {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 15px;
+    padding-bottom: 30px;
+    
+}
+.re-media {
+    background: linear-gradient( 149deg, #192247 0%, #210e17 96.86% );
+    padding: 10px;
+    border-radius: 10px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    min-height: 200px;
+    min-width: 270px;
+    font-size: 15px;
+}
+/* faq section */
+.faq-section {
+    font-size: 18px;
+    font-weight: 500;
+    min-width: 1000px;
+    min-height: 200px;
+    
+}
+
+.faq {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 5px;
+    margin: 0;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0;
+    align-items: start;
+}
+.faq li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+}
+.faq li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 3px;
+    cursor: pointer;
+    position: relative;
+}
+.faq label::after {
+    content: '^';
+    font-size: 30px;
+    font-weight: 100;
+    position: absolute;
+    right: 20px;
+
+}
+input[type="checkbox"] {
+    display: none;
+
+}
+.faq .faq-content {
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    margin: 0;
+
+}
+
+.faq input[type="checkbox"]:checked + label + .faq-content {
+    max-height: 400px;
+    padding: 20px;
+
+}
+.faq input[type="checkbox"]:checked + label::after {
+    transform: rotate(180deg);
+}
+.faq-section .b-header button {
+    background-color: #e50914;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 4px 16px;
+    height: 32px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+/* second email form */
+.form-email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-email small {
+    font-size: 13px;
+    margin-top: 20px;
+}
+.faq-section .b-header input {
+    font-size: 13px;
+    min-width: 500px;
+}
+/* footer */
+.footer {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    color: #777;
+    border-top: 6px;
+
+}
+
+/* footer section */
+.footer h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    
+
+}
+.footer span {
+    text-decoration: underline;
+}
+.rows {
+    display: flex;
+    justify-content: space-between;
+
+}
+.clumns {
+    flex: 1;
+    margin-bottom: 20px;
+}
+.clumns a {
+    display: block;
+    text-decoration: underline;
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 12px;
+    align-items: flex-start;
+}
+
+/* Language section */
+.faq img {
+    font-size: 10px;
+}
+
+.faq-section.language-d {
+  height: auto;
+  min-height: 0;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.faq-section.language-d .faq li {
+
+  width: fit-content;
+  background-color: rgba(22, 22, 22, 0.7);
+  display: 0;
+  gap: 0;
+  grid-template-columns: 0;
+  border-radius: 4px;
+  
+  border: 1px solid #777;
+}
+
+/* ---translate icon----- */
+.faq-section.language-d .faq img {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.faq-section.language-d .faq li label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2px 8px;
+    cursor: pointer;
+    background-color: rgb(15,15,15)
+}
+.faq-section.language-d .faq li label span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.faq-section.language-d .faq li label::after {
+    position: static;
+    margin-left: 12px;
+}
+/* dropdown background */
+.faq-section.language-d .faq-content {
+  width: 100%;
+  background-color: #1382c2;
+}
+
+#za-signature {
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 70px;
+    align-items: flex-start;
+}
+
+/* =========================================================
+   CLEANUP FOR LANGUAGE DROPDOWN (Applies to all screens)
+   ========================================================= */
+.faq-section.language-d {
+  height: auto;
+  min-height: 0;
+  min-width: 0; 
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.faq-section.language-d .faq {
+  display: block; 
+  width: fit-content;
+}
+
+.faq-section.language-d .faq li {
+  width: fit-content;
+  padding: 0;
+  background-color: rgba(22, 22, 22, 0.7);
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.7);
+}
+
+.faq-section.language-d .faq li label {
+  background-color: rgba(22, 22, 22, 0.7);
+  color: #ffffff;
+  padding: 6px 12px;
+  margin-bottom: 0;
+}
+
+.faq-section.language-d .faq li label::after {
+  font-size: 16px;
+  position: static;
+  margin-left: 12px;
+}
+
+.faq-section.language-d .faq-content {
+  background-color: #161616;
+  color: #ffffff;
+}
+
+#za-signature {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+/* =========================================================
+   TABLETS & SMALL LAPTOPS (1024px and below)
+   ========================================================= */
+@media (max-width: 1024px) {
+  
+  .faq-section {
+    min-width: 0;
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  /* Change "More Reasons to Join" cards from 4 columns to 2 columns */
+  .re-article {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 0 24px 30px;
+  }
+
+  .re-media {
+    min-width: 0;
+    width: 100%;
+  }
+
+  /* Change FAQ from 2 columns to 1 full-width column */
+  .faq {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  /* Footer padding */
+  .footer {
+    padding: 40px 24px 30px;
+  }
+}
+
+/* =========================================================
+   MOBILE PHONES (600px and below)
+   ========================================================= */
+@media (max-width: 600px) {
+  /* Stack "More Reasons to Join" cards into 1 column */
+  .re-article {
+    grid-template-columns: 1fr;
+    padding: 0 16px 24px;
+  }
+
+  .re-media {
+    min-height: 150px;
+    align-items: flex-start;
+  }
+
+  /* FAQ section & accordion items */
+  .faq-section {
+    padding: 0 16px;
+  }
+
+  .faq li label {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .faq label::after {
+    font-size: 22px;
+    right: 16px;
+  }
+
+  /* Second email form: override min-width: 500px so it fits mobile screens */
+  .faq-section .b-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .faq-section .b-header input {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 44px;
+    padding: 0 12px;
+  }
+
+  .faq-section .b-header button {
+    height: 40px;
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  /* Footer links: wrap your 4 .clumns into a 2x2 grid */
+  .footer {
+    padding: 32px 16px 24px;
+  }
+
+  .rows {
+    flex-wrap: wrap;
+  }
+
+  .clumns {
+    flex: 0 0 50%; /*  2 columns per row instead of 4 squished columns */
+    margin-bottom: 16px;
+  }
+
+  /* Keep language dropdown compact on mobile */
+  .faq-section.language-d {
+    padding: 0;
+  }
+}
+
+
+
+
+
